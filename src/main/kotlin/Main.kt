@@ -12,5 +12,5 @@ fun main(){
 
     studentArray[0] = Student("Abu Sufian", 105269, 295479, "Computer")
 
-    println("Size of student array is ${studentArray.size}")
+    
 }
