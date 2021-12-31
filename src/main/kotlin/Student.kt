@@ -1,13 +1,13 @@
 class Student(
-    private var name:String,
-    private var roll:Int,
-    private var registration:Long,
-    private var department:String
+    var name:String,
+
 ){
-    fun displayInfo(){
-        println("Student Name: $name")
-        println("Student Roll: $roll")
-        println("Student Registration: $registration")
-        println("Student Department: $department")
-    }
+
+//    private var roll:Int,
+//    private var className:String,
+//    private var bangla:Subject,
+//    private var english:Subject,
+//    private var math:Subject
+
+
 }

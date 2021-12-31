@@ -1,16 +1,27 @@
 import java.util.Scanner
 
-fun main(){
+fun main() {
+    val scn = Scanner(System.`in`)
 
-   val scn = Scanner(System.`in`)
-
-    println("*********Student Info Management*********\n\n")
+    println("*********Student Info Management*********\n")
     print("Enter total student number: ")
     val n = scn.nextInt()
 
-    val studentArray = Array<Student?>(n){null}
+    val studentArray = Array<Student?>(size = n) { null }
 
-    studentArray[0] = Student("Abu Sufian", 105269, 295479, "Computer")
+    for (i in studentArray.indices) {
+        val scn2 = Scanner(System.`in`)
+        print("${i + 1}. Enter Student Name:")
+        val name = scn2.nextLine()
+        studentArray[i] = Student(name)
+    }
 
-    // Hello Madam!
+    println("\nEntered Student Name:")
+    for (s in studentArray) {
+        if (s != null) {
+            println(s.name)
+        }
+    }
+
+
 }
