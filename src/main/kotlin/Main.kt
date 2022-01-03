@@ -62,10 +62,25 @@ fun main() {
         )
     }
 
-    println("\nEntered Student Name:")
-    for (s in studentArray) {
-        if (s != null) {
-            println(s.name)
+    println("\nEntered Student Information:")
+    for(i in studentArray.indices){
+        for(j in i+1 until studentArray.size) {
+            val s1 = studentArray[i]
+            val s2 = studentArray[j]
+            if(s1?.totalEarnedMarks()!! < s2?.totalEarnedMarks()!!){
+                val temp = studentArray[i]
+                studentArray[i] = studentArray[j]
+                studentArray[j] = temp
+            }
         }
+    }
+
+    for(i in studentArray.indices){
+        studentArray[i]?.setRoll(i+1)
+    }
+
+    for (s in studentArray){
+        s?.display()
+        println()
     }
 }

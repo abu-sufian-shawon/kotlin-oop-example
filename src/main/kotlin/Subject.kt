@@ -3,7 +3,9 @@ class Subject(
     private var name:String,
     private var totalMarks:Double,
     private var earned:Double
-
 ) {
 
+    fun getMarks():Double{
+        return earned
+    }
 }
